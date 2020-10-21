@@ -45,4 +45,4 @@ MONGO_USER = quote(os.getenv('MONGO_USER'))
 MONGO_PASS = quote(os.getenv('MONGO_PASS'))
 
 client = MongoClient("mongodb+srv://{}:{}@cluster0.fyiw5.mongodb.net/{}?retryWrites=true&w=majority".format(MONGO_USER, MONGO_PASS, DB_NAME))
-db = client.DB_NAME
+db = client[DB_NAME]
