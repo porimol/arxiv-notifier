@@ -24,7 +24,7 @@ def subscriber():
             'created_at': asia_timezone.localize(datetime.utcnow()),
             'updated_at': asia_timezone.localize(datetime.utcnow())
         }
-        rsp = db.subscriber.insert_one(subscriber_data)
+        rsp = db.subscribers.insert_one(subscriber_data)
         
         return render_template('subscribe_success.html', page_title=page_title, full_name=full_name)
 
