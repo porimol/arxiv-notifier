@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'header.html' %}
+
+<body>
+
+    <!-- ======= Header ======= -->
+    {% include 'sidebar.html' %}
+    <!-- End #header -->
+
+    {% block body %}
+    {% endblock %}
+
+    {% block landing_body %}
+    {% endblock %}
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>
