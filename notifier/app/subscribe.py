@@ -20,9 +20,9 @@ def subscriber():
             'full_name': full_name,
             'email_address': subscribe_form.email_address.data,
             'subscribe_categories': ['CS'],
-            'subscribe_at': asia_timezone.localize(datetime.utcnow()),
-            'created_at': asia_timezone.localize(datetime.utcnow()),
-            'updated_at': asia_timezone.localize(datetime.utcnow())
+            'subscribe_at': datetime.now(), #asia_timezone.localize(datetime.now())
+            'created_at': datetime.now(), #asia_timezone.localize(datetime.now())
+            'updated_at': datetime.now() #asia_timezone.localize(datetime.now())
         }
         rsp = db.subscribers.insert_one(subscriber_data)
         
